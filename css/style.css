@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+:root{
+    --color1: #040F0F;
+    --color2: #248232;
+    --color3: #2BA84A;
+    --color4: #2D3A3A;
+    --color5: #FCFFFC;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color3);
+
+    margin-top: 20px;
+}
+
+#calc{
+    background-color: var(--color1);
+    color: var(--color5);
+    padding: .5em;
+}
+
+#calc h1{
+    font-size: 2em;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+#previous-operation,
+#current-operation{
+    min-height: 1.6em;
+    overflow-wrap: break-word;
+    padding: .2em;
+    text-align: end;
+
+}
+
+#previous-operation{
+    color: rgb(178, 178, 178);
+}
+
+#current-operation{
+    color: var(--color5);
+    padding-bottom: 10px;
+    font-size: 50px;
+}
+
+#buttons-operation{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+button{
+    background-color: var(--color4);
+    color: var(--color5);
+
+    padding: 30px;
+
+    font-size: 1.2em;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--color2);
+}
+
+.igual{
+    grid-column: span 2; background-color: var(--color3);
+}
+
+@media (max-width: 500px) {
+    #calc{
+        transform: scale(0.8);
+
+        margin-top: -50px;
+    }
+}
+
+@media (max-width: 300px) {
+    #calc{
+        transform: scale(0.6);
+
+        margin-top: -100px;
+    }
+}
+
+@media (max-width: 250px) {
+    #calc{
+        transform: scale(0.4);
+
+        margin-top: -180px;
+    }
+}
