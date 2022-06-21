@@ -41,7 +41,16 @@ body{
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-#painel {
+#previous-value{
+    margin-top: -20px;
+    min-height: 1.6em;
+    overflow-wrap: break-word;
+    padding: .2em;
+    text-align: end;
+    color: rgb(178, 178, 178);
+}
+
+#painel{
     text-align: end;
     background-color: transparent;
     color: white;

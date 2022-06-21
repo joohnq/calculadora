@@ -1,6 +1,8 @@
 "use stict";
 const btn = document.querySelectorAll("button");
 const painel = document.getElementById('painel')
+const previousValue = document.getElementById('previous-value')
+
 var valuesOperation = []
 var operation = []
 
@@ -61,6 +63,7 @@ btn.forEach(b => b.addEventListener('click', (e) => {
 
     if(e.target.className == 'operation'){
         valuesOperation.push(Number(painel.textContent))
+        previousValue.textContent += ` ${painel.textContent} ${e.target.textContent}`
         painel.textContent = ''
         switch(e.target.textContent){
             case '+':
@@ -86,12 +89,26 @@ btn.forEach(b => b.addEventListener('click', (e) => {
         }
     }
 
-    if(e.target.textContent == '='){
-        mostrarValorFinal(painel.textContent, operation[0])
-    }
-
-    if(e.target.textContent == 'C'){
-        atualizarPainel('C')
+    switch(e.target.textContent){
+        case 'C':
+            previousValue.textContent = ''
+            operation = []
+            valuesOperation = []
+            break
+        case 'CE':
+            painel.textContent = ''
+            previousValue.textContent = ''
+            operation = []
+            valuesOperation = []
+            break;
+        case 'DEL':
+            const painelSting = `${painel.textContent}`
+            painel.textContent = painelSting.substring(0, painelSting.length - 1)
+            break;
+        case '=':
+            mostrarValorFinal(painel.textContent, operation[0])
+            previousValue.textContent = ''
+            break;
     }
 }))
 
