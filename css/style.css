@@ -36,28 +36,18 @@ body{
     text-transform: uppercase;
 }
 
-#previous-operation,
-#current-operation{
-    min-height: 1.6em;
-    overflow-wrap: break-word;
-    padding: .2em;
-    text-align: end;
-
-}
-
-#previous-operation{
-    color: rgb(178, 178, 178);
-}
-
-#current-operation{
-    color: var(--color5);
-    padding-bottom: 10px;
-    font-size: 50px;
-}
-
 #buttons-operation{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#painel {
+    text-align: end;
+    background-color: transparent;
+    color: white;
+    font-size: 4em;
+    height: 70px;
+    margin: 10px;
 }
 
 button{
