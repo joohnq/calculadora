@@ -30,6 +30,8 @@ body{
     padding: .7em;
 
     border-radius: 10px;
+
+    max-width: 400px;
 }
 
 #calc h1{
@@ -41,6 +43,7 @@ body{
 #buttons-operation{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
 }
 
 #previous-value{
@@ -72,6 +75,8 @@ button{
     font-size: 1.2em;
     font-weight: 800;
     cursor: pointer;
+
+    border: none;
 }
 
 button:hover{
@@ -84,24 +89,52 @@ button:hover{
 
 @media (max-width: 500px) {
     #calc{
-        transform: scale(0.8);
+        transform: scale(0.9);
 
-        margin-top: -50px;
+        margin-top: -30px;
+    }
+}
+
+@media (max-width: 400px) {
+    #calc{
+        margin-top: -30px;
+    }
+
+    button{
+        padding: 20px;
+    }
+}
+
+@media (max-width: 350px) {
+    button{
+        padding: 15px;
     }
 }
 
 @media (max-width: 300px) {
-    #calc{
-        transform: scale(0.6);
-
-        margin-top: -100px;
+    button{
+        padding: 15px 10px;
     }
 }
 
 @media (max-width: 250px) {
     #calc{
-        transform: scale(0.4);
+        transform: scale(0.7);
 
-        margin-top: -180px;
+        margin-top: -80px;
+    }
+    button{
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 200px) {
+    #calc{
+        transform: scale(0.6);
+
+        margin-top: -110px;
+    }
+    button{
+        padding: 20px 10px;
     }
 }
