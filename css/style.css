@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 :root{
-    --color1: #040F0F;
-    --color2: #248232;
-    --color3: #2BA84A;
-    --color4: #2D3A3A;
-    --color5: #FCFFFC;
+    --color1: #000022;
+    --color2: #040F16;
+    --color3: #0094C6;
+    --color4: #005E7C;
+    --color5: #F7F5FB;
 }
 *{
     padding: 0;
@@ -27,7 +27,9 @@ body{
 #calc{
     background-color: var(--color1);
     color: var(--color5);
-    padding: .5em;
+    padding: .7em;
+
+    border-radius: 10px;
 }
 
 #calc h1{
@@ -51,12 +53,14 @@ body{
 }
 
 #painel{
-    text-align: end;
-    background-color: transparent;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    background-color: var(--color4);
     color: white;
-    font-size: 4em;
+    font-size: 3.5em;
     height: 70px;
-    margin: 10px;
+    margin: 10px 5px;
 }
 
 button{
