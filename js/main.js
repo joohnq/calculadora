@@ -12,6 +12,16 @@ function atualizarPainel(btnValue){
     }else{
         painel.textContent += btnValue.textContent
     }
+
+    if(painel.textContent.length > 10 && painel.textContent.length < 14){
+        painel.style.fontSize = '3em'
+    }else if(painel.textContent.length > 14 && painel.textContent.length < 21){
+        painel.style.fontSize = '2em'
+    }else if(painel.textContent.length > 21){
+        painel.style.fontSize = '1em'
+    }else if(painel.textContent.length > 41){
+        painel.style.fontSize = '1em'
+    }
 }
 
 function somar(){
